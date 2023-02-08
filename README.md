@@ -117,7 +117,7 @@ HOSTS="192.168.XX.01 192.168.XX.02"
 First, run server by
 
 ```bash
-python app.py --model server
+python app.py --mode server
 ```
 
 Then, run clients by
@@ -126,7 +126,7 @@ Then, run clients by
 ./run.sh
 ```
 
-or [optional] `python app.py --model client`
+or [optional] `python app.py --mode client`
 
 
 [^1]: The platform is constructed is based on the works in [fedavgpy](https://github.com/lx10077/fedavgpy) and [FedProx](https://github.com/litian96/FedProx).
