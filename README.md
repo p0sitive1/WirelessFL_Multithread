@@ -28,11 +28,7 @@ Once you have all the packages installed, run the following command to activate 
 conda activate WirelessFL
 ```
 
-### 2. Install and Config Matlab Engine
-
-Our proposed algorithm will call MATLAB's `fmincon()` function to help solve optimization problem. Thus, you need to install necessary MATLAB package according to [Install MATLAB Engine API for Python](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html).
-
-### 3. Download data and generate FL dataset
+### 2. Download data and generate FL dataset
 
 `EMNIST` `MNIST` `CIFAR10` dataset can be used for prototype environment. To download and generate data, run the following command in the corresponding folders
 
@@ -42,7 +38,7 @@ python generate_emnist.py
 
 The program will generate 40-client niid dataset by default. You can modify `NUM_USER` vairabke in `generate_random_niid.py` to change the number of users.
 
-### 4. Create necessary folders
+### 3. Create necessary folders
 
 You could create necessary helper folders by running the following command:
 
