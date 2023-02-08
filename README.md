@@ -19,13 +19,13 @@ This repo demonstrates our WirelessFL[^1], an Internet of Things platform for Fe
 The preferred approach for installing all the dependencies is to use [Anaconda](https://www.anaconda.com/products/individual), which is a Python distribution that includes many of the most popular Python packages for science, math, engineering and data analysis. Once you install Anaconda you can run the following command inside the working directory to install the required packages for FL server:
 
 ```bash
-conda env create -f wirelessFL.yml
+conda env create -f WirelessFL.yml
 ```
 
 Once you have all the packages installed, run the following command to activate the environment when you work on the server.
 
 ```bash
-conda activate wirelessFL
+conda activate WirelessFL
 ```
 
 ### 2. Install and Config Matlab Engine
@@ -34,10 +34,10 @@ Our proposed algorithm will call MATLAB's `fmincon()` function to help solve opt
 
 ### 3. Download data and generate FL dataset
 
-We used `EMNIST` dataset for prototype environment. To download data and generate non-i.i.d. dataset, run the following command from the `data/EMNIST` directory:
+`EMNIST` `MNIST` `CIFAR10` dataset can be used for prototype environment. To download and generate data, run the following command in the corresponding folders
 
 ```bash
-python generate_random_niid.py
+python generate_emnist.py
 ```
 
 The program will generate 40-client niid dataset by default. You can modify `NUM_USER` vairabke in `generate_random_niid.py` to change the number of users.
@@ -76,7 +76,6 @@ The wireless communication is achieved in WiFi environment. A powerful WiFi rout
 The end-to-end communication is implemented based on TCP protocol. We used socket programing in Python to achieve low-level speed monitoring. To ensure clients can connect to the server, you need to change `IP` variable in `src/communication/comm_config.py` to the IP address of server. The following shows the default configuration:
 
 ```Python
-
 # Connection
 IP="192.168.43.2"
 ```

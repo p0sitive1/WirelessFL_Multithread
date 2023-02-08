@@ -1,5 +1,5 @@
-data/emnist
-data/mnist
-data/cifar
+data/emnist/data
+data/mnist/data
+data/cifar/data
 cache
 log
