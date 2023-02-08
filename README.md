@@ -9,7 +9,6 @@ This repo demonstrates our WirelessFL[^1], an Internet of Things platform for Fe
 2. [Network Configuration](#network-configuration)
 3. [Clients Setup](#clients-setup)
 4. [Run Experiment](#run-experiment)
-5. [Workflow in Paper](#workflow-in-paper)
 
 
 ## Installation
