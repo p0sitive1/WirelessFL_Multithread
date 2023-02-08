@@ -13,6 +13,8 @@ This repo demonstrates our WirelessFL[^1], an Internet of Things platform for Fe
 
 ## Installation
 
+Note that the working OS on the server and each raspberry pi client is ubuntu server
+
 ### 1.  Install Anaconda and required packages
 
 The preferred approach for installing all the dependencies is to use [Anaconda](https://www.anaconda.com/products/individual), which is a Python distribution that includes many of the most popular Python packages for science, math, engineering and data analysis. Once you install Anaconda you can run the following command inside the working directory to install the required packages for FL server:
@@ -76,8 +78,6 @@ IP="192.168.43.2"
 ```
 
 ## Clients Setup
-
-Since the procedure of configuring IoT devices is tedious, we prepared two bash scripts to help automatically set up the clients and execute programs on Raspberry Pi remotely.
 
 ### 1. Install packages on Raspberry Pi
 
