@@ -98,6 +98,26 @@ Then, you can run the following command to install package and send the latest v
 sh prepare.sh
 ```
 
+Then setup the environment of raspberry pi under root using the following commands
+
+```bash
+sudo su
+apt install python-is-python3
+apt install pip
+```
+
+Then install torch and torchvision. Note that raspberry pi uses aarch, files can be found in [https://download.pytorch.org/whl/torch_stable.html](https://download.pytorch.org/whl/torch_stable.html). 
+Download the file 
+
+torch-1.12.0-cp38-cp38-manylinux2014_aarch64.whl
+
+torchvision-0.13.0-cp38-cp38-manylinux2014_aarch64.whl
+
+Then install them using pip. 
+
+Then install tensorboardX and pickle5 using pip. 
+
+
 ### 2. Set up `run.sh` script
 
 We also prepared a script for you to remotely run client programs on Raspberry Pi for federated learning training. Like previous step, you need to first add IP address in the `run.sh` script:
@@ -109,8 +129,6 @@ HOSTS="192.168.XX.01 192.168.XX.02"
 ## Run Experiment
 
 ### 1. Set hyperparameters in `app.py` in `server_main()`
-
-
 
 ### 2. Run Experiment
 
@@ -126,7 +144,13 @@ Then, run clients by
 ./run.sh
 ```
 
-or [optional] `python app.py --mode client`
+or 
+
+```bash
+python app.py --mode client
+``` 
+
+under root in each of the raspberry pi
 
 
 [^1]: The platform is constructed is based on the works in [fedavgpy](https://github.com/lx10077/fedavgpy) and [FedProx](https://github.com/litian96/FedProx).
