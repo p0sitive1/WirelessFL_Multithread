@@ -87,6 +87,13 @@ To run programs on Raspberry Pi, you need to install necessary packages and send
 HOSTS="192.168.XX.01 192.168.XX.02"
 ```
 
+* generate a public key first using 
+```bash
+ssh-keygen -t rsa
+```
+
+under the folder .ssh
+
 Then, you can run the following command to install package and send the latest version of code to clients:
 
 ```bash
